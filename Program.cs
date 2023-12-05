@@ -1,5 +1,5 @@
-using Microsoft.EntityFrameworkCore;
 using WebApplication1.Models;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,7 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<Contexto>
-    (options => options.UseSqlServer("Data Source=SP-1491029\\SQLSENAI;Initial Catalog = Projeto_Final;Integrated Security = True;TrustServerCertificate = True"));
+    (options => options.UseSqlServer("Data Source=SP-1491029\\SQLSENAI;" +
+    "Initial Catalog = Projeto_FinalValmir;" +
+    "Integrated Security = True;TrustServerCertificate = True"));
 
 var app = builder.Build();
 
@@ -28,6 +30,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Usuario}/{action=login}");
 
 app.Run();

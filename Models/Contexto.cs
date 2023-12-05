@@ -13,6 +13,10 @@ namespace WebApplication1.Models
         public DbSet<EntradaProduto> EntradaProduto { get; set; }
         public DbSet<TipoSaida> TipoSaida { get; set; }
         public DbSet<Usuario> Usuario { get; set; }
-
+        public DbSet<Cidade> Cidade { get; set; }
+        public DbSet<Cliente> Cliente { get; set; }
+        public DbSet<Estado> Estado { get; set; }
+        public DbSet<Pais> Pais { get; set; }
+        public DbSet<SaidaProduto> SaidaProduto { get; set; }
     }
 }

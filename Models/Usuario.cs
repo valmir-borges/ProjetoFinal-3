@@ -6,7 +6,7 @@ namespace Projeto_Final.Models
     [Table("Usuario")]
     public class Usuario
     {
-        [Column("Id")]
+        [Column("UsuarioId")]
         [Display(Name = "Cód. Usuário")]
 
         public int Id { get; set; }

@@ -6,7 +6,7 @@ namespace Projeto_Final.Models
     [Table("Produto")]
     public class Produto
     {
-        [Column("Id")]
+        [Column("ProdutoId")]
         [Display(Name = "Cód. Produto")]
 
         public int Id { get; set; }
@@ -21,14 +21,14 @@ namespace Projeto_Final.Models
 
         public int QuantidadeEstoque { get; set;}
 
-        [ForeignKey("Id")]
+        [ForeignKey("TipoProdutoId")]
         [Display(Name = "Tipo do Produto")]
 
         public int TipoProdutoId { get; set; }
         public TipoProduto? TipoProduto { get; set; }
 
 
-        [ForeignKey("Id")]
+        [ForeignKey("FornecedorId")]
         [Display(Name = "Fornecedor do Produto")]
 
         public int FornecedorId { get; set; }

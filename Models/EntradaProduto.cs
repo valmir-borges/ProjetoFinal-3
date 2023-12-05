@@ -6,13 +6,13 @@ namespace Projeto_Final.Models
     [Table("EntradaProduto")]
     public class EntradaProduto
     {
-        [Column("Id")]
+        [Column("EntradaProdutoId")]
         [Display(Name ="Cód. Entrada Produto")]
 
         public int Id { get; set; }
 
-        [ForeignKey("Id")]
-        [Display(Name = "Produto")]
+        [ForeignKey("ProdutoId")]
+        [Display(Name = "ProdutoId")]
 
         public int ProdutoId { get; set; }
         public Produto? Produto { get; set; }
